@@ -8,7 +8,7 @@ app.get('/',  (req, res) => {
 
 app.use(express.static('public'))
 
-app.listen(3000,  () => {
+app.listen(PORT,  () => {
     console.log('Example app listening on port ${PORT}')
 });
 

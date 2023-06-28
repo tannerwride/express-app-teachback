@@ -1,0 +1,11 @@
+version: 2.1
+jobs:
+  basic_job:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - run: echo "hi"
+workflows:
+  basic_workflow:
+    jobs:
+      - basic_job
