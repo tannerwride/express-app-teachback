@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express() 
-const PORT = process.env.PORT || 8080;
+
 
 app.get('/',  (req, res) => {
     res.send('Hello TSMs')
@@ -8,7 +8,5 @@ app.get('/',  (req, res) => {
 
 app.use(express.static('public'))
 
-app.listen(PORT,  () => {
-    console.log('Example app listening on port ${PORT}')
-});
+module.exports = app;
 
