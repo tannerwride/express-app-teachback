@@ -6,9 +6,9 @@ This repo will be used for TSM's to practice implementing CircleCI features on a
 
 The objective of this activity is to have TSMs practice implementing the following:
 
-    - Test splitting 
-    - Contexts 
-    - Uploading test results 
+- Test splitting 
+- Contexts 
+- Uploading test results 
 
 ## How this Repo Works
 
@@ -16,3 +16,9 @@ This repo is broken down by branches.
 
 - 0: This is the starter branch with a basic build, test, deploy, workflow. The task is to take this branch and add test splitting, upload the test results, and add contexts for the deployment secrets.
 
+## Prerequisites
+
+1. Fork this repository to your personal GitHub account. 
+2. Setup the CircleCI project in your account
+    - Point to the branch titled `0` for the config file
+3. Setup a Google App Engine app. 
