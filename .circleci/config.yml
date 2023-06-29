@@ -1,11 +1,12 @@
 version: 2.1
+orbs: 
+  node: circleci/node@5.1.0
 jobs:
-  basic_job:
-    docker:
-      - image: cimg/base:stable
+  install_node_packages:
+    executor: node/default
     steps:
-      - run: echo "hi"
+      - node/install-packages
 workflows:
   basic_workflow:
     jobs:
-      - basic_job
+      - install_node_packages
