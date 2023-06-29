@@ -2,13 +2,12 @@ const request = require('supertest');
 const app = require('../app'); 
 
 describe("Test the root path", () => {
-    test("home status response check", done => {
+    test("page2 test", done => {
       request(app)
-        .get("/")
+        .get("/page2.html")
         .then(response => {
           expect(response.statusCode).toBe(200);
           done();
         });
     });
   });
-
