@@ -3,7 +3,7 @@ const app = express()
 
 
 app.get('/',  (req, res) => {
-    res.send('Hello TSMs')
+    res.status(200).send('Hello TSMs')
 });
 
 app.use(express.static('public'))
