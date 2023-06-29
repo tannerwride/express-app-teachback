@@ -5,6 +5,7 @@ jobs:
   install_node_packages:
     executor: node/default
     steps:
+      - checkout
       - node/install-packages
 workflows:
   basic_workflow:
