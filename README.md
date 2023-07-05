@@ -27,7 +27,7 @@ This repo is broken down by branches.
 The premise of this activity is that you have created a basic Node.js application and have a workflow on CircleCI that builds, tests, and deploys that application. The platform team you are a part of wants to implement a few CircleCI features to improve the CI/CD pipeline. Your job is to add contexts to the project to keep the organizations secrets safe, add test splitting to improve workflow run time, and store test results to detect any flaky tests and make improvements over time. 
 
 <details>
-    <summary>Click to view a description of files in this repo</summary>
+    <summary>Expand to view a description of files in this repo</summary>
 
 Inside this repo are several directories and files. Below is a quick explaination of what they are. You will only make edits to the `.circleci/config.yml` file, however.  
 
