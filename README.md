@@ -31,6 +31,18 @@ The premise of this activity is that you have created a basic Node.js applicatio
 
 Inside this repo are several directories and files. Below is a quick explaination of what they are. You will only make edits to the `.circleci/config.yml` file, however.  
 
+- __test__ : this directory contains the test files. You will need to point CircleCI to this directory when test splitting.
+
+- node_modules: contains all node modules needed to run this application
+
+- public: this directory contains the website page files
+
+- app.js: this JavaScript contains the code to navigate the website
+
+- package.json: contains required packages for the app
+
+- server.js: this JavaScript runs the application
+
 </details>
 
 ### Add a new Context 
