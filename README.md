@@ -38,3 +38,5 @@ Inside this repo are several directories and files. Below is a quick explainatio
 ### Implement Test Splitting 
 
 ### Upload Test Results 
+
+### Right Size Compute 
