@@ -49,6 +49,18 @@ Inside this repo are several directories and files. Below is a quick explainatio
 
 ### Implement Test Splitting 
 
+You've been tasked with implementing the test splitting feature on the job "build_and_test". For this activity, simply make edits in the GitHub UI by opening the config file found in the `.circleci` directory. 
+
+Here are some tips to help you along:
+
+- CircleCI needs to know how many [parallel machines](https://circleci.com/docs/parallelism-faster-jobs/#specify-a-jobs-parallelism-level) to use to distribute tests across.
+- CircleCI needs to know what files contain your tests.
+- CircleCI needs to know how to split the tests, by filename, filesize, or timing data.
+
+Start by splitting by filename. 
+
+**Hint**: Pointing to test files and specifying a test split type (filename, filesize, timing) both happen by typing a [CLI command](https://circleci.com/docs/use-the-circleci-cli-to-split-tests/) in the config file. [This tutorial will help you impliment test splitting](https://circleci.com/docs/test-splitting-tutorial/) 
+
 ### Upload Test Results 
 
 ### Right Size Compute 
