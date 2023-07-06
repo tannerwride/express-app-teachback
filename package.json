@@ -20,9 +20,9 @@
     "reporters": [
       "default",
       "jest-junit"
-    ],
+    ]
   },
   "jest-junit": {
     "addFileAttribute": "true"
-  },
+  }
 }
