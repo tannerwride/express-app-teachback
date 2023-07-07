@@ -43,7 +43,7 @@ Inside this repo are several directories and files. Below is a quick explainatio
 ## Instructions
 The premise of this activity is that you have created a basic Node.js application and have a workflow on CircleCI that builds, tests, and deploys that application. The platform team you are a part of wants to implement a few CircleCI features to improve the CI/CD pipeline. Your job is to add contexts to the project to keep the organizations secrets safe, add test splitting to improve workflow run time, and store test results to detect any flaky tests and make improvements over time. 
 
-To make edits to the config file, open the `config.yml` file in your forked GitHub repo and click the edit button.
+To make edits to the config file, open the `config.yml` file in your forked GitHub repo and click the edit button. When finished editing, click commit changes. GitHub may ask for a commit message, you can modify this if you want, or leave it as is. 
 
 ### Add a new Context 
 
