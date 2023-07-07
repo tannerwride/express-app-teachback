@@ -19,3 +19,36 @@ describe('Time test', () => {
       expect(foo).toBeDefined();
     });
 })
+
+describe("Test the root path", () => {
+  test("page1 test 1", done => {
+    request(app)
+      .get("/page1.html")
+      .then(response => {
+        expect(response.statusCode).toBe(200);
+        done();
+      });
+  });
+});
+
+describe("Test the root path", () => {
+  test("page1 test 2", done => {
+    request(app)
+      .get("/page1.html")
+      .then(response => {
+        expect(response.statusCode).toBe(200);
+        done();
+      });
+  });
+});
+
+describe("Test the root path", () => {
+  test("page1 test 3", done => {
+    request(app)
+      .get("/page1.html")
+      .then(response => {
+        expect(response.statusCode).toBe(200);
+        done();
+      });
+  });
+});
