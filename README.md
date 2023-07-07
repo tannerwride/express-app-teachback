@@ -36,7 +36,7 @@ Inside this repo are several directories and files. Below is a quick explainatio
 
 ## Prerequisites
 
-1. [Fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo#forking-a-repository) this repository to your personal GitHub account. 
+1. [Fork](https://github.com/tannerwride/express-app-teachback/fork) this repository to your personal GitHub account. 
 2. [Setup the CircleCI project](https://circleci.com/docs/getting-started/?utm_source=google&utm_medium=sem&utm_campaign=sem-google-dg--uscan-en-dsa-tROAS-auth-brand&utm_term=g_-_c__dsa_&utm_content=&gclid=Cj0KCQjwtO-kBhDIARIsAL6LoreqoxYV4ckTzv020rOwBBsWl2nJ5QQsMQeJ6YMxhaJJgzqd4hp9hCgaAnrNEALw_wcB) in your account
     - Point to the branch titled `0` for the config file
 
@@ -69,6 +69,6 @@ Your next task is to upload test results to CircleCI so we can split by those te
 
 ### Split Tests by Timing
 
-Update the test command in the `config.yml` file to split by timing data. 
+Update the test command in the `config.yml` file to split by timing data. Remember, you define the test splitting method using the CLI command adding `split-by=timings`
 
 ### Right Size Compute 
