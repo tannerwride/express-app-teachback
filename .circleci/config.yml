@@ -5,6 +5,7 @@ jobs:
   build_and_test:
     executor: node/default
     resource_class: small
+    parallelism: 4
     steps:
       - checkout
       - node/install-packages
