@@ -4,6 +4,7 @@ orbs:
 jobs:
   build_and_test:
     executor: node/default
+    parallelism: 4
     steps:
       - checkout
       - node/install-packages
@@ -12,10 +13,14 @@ jobs:
           command: mkdir ~/testresults
       - run: 
           name: Run tests
-          command: npm test
+          command: |
+              TEST=$(circleci tests glob "__test/*.js" | circleci tests split -- split-by=timings)
+              npm test $TEST
       - run:
           command: cp junit.xml ~/testresults/
           when: always
+      - store_test_results:
+          path: ~/testresults
 workflows:
   basic_workflow:
     jobs:
