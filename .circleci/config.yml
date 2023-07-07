@@ -1,0 +1,23 @@
+version: 2.1
+orbs: 
+  node: circleci/node@5.1.0
+jobs:
+  build_and_test:
+    executor: node/default
+    resource_class: small
+    steps:
+      - checkout
+      - node/install-packages
+      - run: 
+          name: Create folder for test results
+          command: mkdir ~/testresults
+      - run: 
+          name: Run tests
+          command: npm test
+      - run:
+          command: cp junit.xml ~/testresults/
+          when: always
+workflows:
+  basic_workflow:
+    jobs:
+      - build_and_test
