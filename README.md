@@ -45,11 +45,11 @@ The premise of this activity is that you have created a basic Node.js applicatio
 
 To make edits to the config file, open the `config.yml` file in your forked GitHub repo and click the edit button.
 
-<img src="images/edit.png>
+<img src="images/edit.png">
 
 When finished editing, click commit changes. GitHub may ask for a commit message, you can modify this if you want, or leave it as is. 
 
-<img src="images/commit.png>
+<img src="images/commit.png">
 
 ### Implement Test Splitting 
 
@@ -75,17 +75,17 @@ Commit the change in GitHub.
 
 If successful you should see something like this on the job in the UI:
 
-<img src="images/testresults.png>
+<img src="images/testresults.png">
 
 ### Split Tests by Timing
 
 Update the test command in the `config.yml` file to split by timing data. Remember, you define the test splitting method using the CLI command adding `split-by=timings`. Commit the config to run a new build. Once the build has completed, rerun the workflow. 
 
-<img src="images/rerun.png>
+<img src="images/rerun.png">
 
 After the workflow completes, open the job and expand the step where tests are run. You will know it was successful if you see the following:
 
-<img src="images/filetimings.png>
+<img src="images/filetimings.png">
 
 `Autodetected filename timings` means CircleCI successfully found timing information to split the tests by. 
 
