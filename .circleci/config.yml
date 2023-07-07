@@ -11,12 +11,16 @@ jobs:
       - run: 
           name: Create folder for test results
           command: mkdir ~/testresults
-      - run: 
+       - run: 
           name: Run tests
-          command: npm test
+          command: |
+              TEST=$(circleci tests glob "__test__/*.js" | circleci tests split --split-by=timings)
+              npm test $TEST
       - run:
           command: cp junit.xml ~/testresults/
           when: always
+      - store_test_results:
+          path: ~/testresults
 workflows:
   basic_workflow:
     jobs:
