@@ -45,8 +45,6 @@ The premise of this activity is that you have created a basic Node.js applicatio
 
 To make edits to the config file, open the `config.yml` file in your forked GitHub repo and click the edit button. When finished editing, click commit changes. GitHub may ask for a commit message, you can modify this if you want, or leave it as is. 
 
-### Add a new Context 
-
 ### Implement Test Splitting 
 
 You've been tasked with implementing the test splitting feature on the job "build_and_test". For this activity, simply make edits in the GitHub UI by opening the config file found in the `.circleci` directory. 
@@ -65,10 +63,11 @@ Start by splitting by filename.
 
 Now that you've implemented test splitting (congrats!), the team would like to start splitting by timing data. Only one problem. We don't have any timing data to split tests by! 
 
-Your next task is to upload test results to CircleCI so we can split by those test results. Luckily, the test results are already being saved in a temporary folder in our environment when a job is run. This file is called `junit.xml`. 
+Your next task is to upload test results to CircleCI so we can split by those test results. Luckily, the test results are already being saved in a temporary folder in our environment when a job is run. This file is called `junit.xml`. Use the `save_test_results` command in the `build_and_test` job to point to this file. 
+
+Commit the change in GitHub. 
 
 ### Split Tests by Timing
 
 Update the test command in the `config.yml` file to split by timing data. Remember, you define the test splitting method using the CLI command adding `split-by=timings`
 
-### Right Size Compute 
