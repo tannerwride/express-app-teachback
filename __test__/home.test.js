@@ -19,3 +19,36 @@ describe('Time test', () => {
       expect(foo).toBeDefined();
     });
 })
+
+describe("Test the root path", () => {
+  test("home status response check 2", done => {
+    request(app)
+      .get("/")
+      .then(response => {
+        expect(response.statusCode).toBe(200);
+        done();
+      });
+  });
+});
+
+describe("Test the root path", () => {
+  test("home status response check 3", done => {
+    request(app)
+      .get("/")
+      .then(response => {
+        expect(response.statusCode).toBe(200);
+        done();
+      });
+  });
+});
+
+describe("Test the root path", () => {
+  test("home status response check 4", done => {
+    request(app)
+      .get("/")
+      .then(response => {
+        expect(response.statusCode).toBe(200);
+        done();
+      });
+  });
+});
