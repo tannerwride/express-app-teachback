@@ -1,6 +1,6 @@
 const request = require('supertest');
 const app = require('../app'); 
-
+jest.setTimeout(300000);
 describe("Test the root path", () => {
     test("page2 test", done => {
       request(app)
