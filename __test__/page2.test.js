@@ -11,3 +11,11 @@ describe("Test the root path", () => {
         });
     });
   });
+
+  describe('Time test', () => {
+    test('page 2 time', async () => {
+        const foo = true;
+        await new Promise((r) => setTimeout(r, 100000));
+        expect(foo).toBeDefined();
+      });
+})

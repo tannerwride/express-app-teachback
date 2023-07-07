@@ -12,3 +12,10 @@ describe("Test the root path", () => {
     });
   });
 
+  describe('Time test', () => {
+    test('Home time', async () => {
+        const foo = true;
+        await new Promise((r) => setTimeout(r, 100000));
+        expect(foo).toBeDefined();
+      });
+})
