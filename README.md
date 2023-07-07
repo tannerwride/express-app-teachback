@@ -63,6 +63,8 @@ Start by splitting by filename.
 
 Now that you've implemented test splitting (congrats!), the team would like to start splitting by timing data. Only one problem. We don't have any timing data to split tests by! 
 
-Your next task is to upload test results to CircleCI so we can split by those test results. Luckily, the test results are already being saved in a temporary folder in our environment when a job is run. 
+Your next task is to upload test results to CircleCI so we can split by those test results. Luckily, the test results are already being saved in a temporary folder in our environment when a job is run. This file is called `junit.xml`. 
+
+### Split Tests by Timing
 
 ### Right Size Compute 

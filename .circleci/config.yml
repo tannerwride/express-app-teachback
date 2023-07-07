@@ -8,8 +8,14 @@ jobs:
       - checkout
       - node/install-packages
       - run: 
+          name: Create folder for test results
+          command: mkdir testresults
+      - run: 
           name: Run tests
           command: npm test
+      - run:
+          command: cp junit.xml ~/testresults/
+          when: always
 workflows:
   basic_workflow:
     jobs:
