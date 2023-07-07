@@ -71,4 +71,6 @@ Your next task is to upload test results to CircleCI so we can split by those te
 
 Update the test command in the `config.yml` file to split by timing data. Remember, you define the test splitting method using the CLI command adding `split-by=timings`
 
+**Hint** Timing data is needed to split tests by timing, so once test results are saved to CircleCI, it may take another run of the workflow to utilize this data when splitting. 
+
 ### Right Size Compute 
