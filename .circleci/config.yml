@@ -16,7 +16,7 @@ jobs:
           name: Test application
           command: |
             TEST=$(circleci tests glob "src/__tests__/*.js" | circleci tests split --split-by=timings)
-          yarn test $TEST
+            npm test $TEST
       # - run: 
       #     name: Run tests
       #     command: npm test
