@@ -5,18 +5,26 @@ jobs:
   build_and_test:
     executor: node/default
     resource_class: small
+    parallelism: 4
     steps:
       - checkout
       - node/install-packages
       - run: 
           name: Create folder for test results
           command: mkdir ~/testresults
-      - run: 
-          name: Run tests
-          command: npm test
+      - run:
+          name: Test application
+          command: |
+            TEST=$(circleci tests glob "src/__tests__/*.js" | circleci tests split --split-by=timings)
+          yarn test $TEST
+      # - run: 
+      #     name: Run tests
+      #     command: npm test
       - run:
           command: cp junit.xml ~/testresults/
           when: always
+      - store_test_results:
+          path: ~/junit
 workflows:
   basic_workflow:
     jobs:
