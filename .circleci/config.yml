@@ -15,8 +15,8 @@ jobs:
       - run:
             command: |
                npx jest --listTests | circleci tests run --command=“JEST_JUNIT_ADD_FILE_ATTRIBUTE=true xargs npx jest --config jest.config.js --runInBand --” --verbose --split-by=timings
-              environment:
-                JEST_JUNIT_OUTPUT_DIR: ./reports/
+            environment:
+              JEST_JUNIT_OUTPUT_DIR: ./reports/
       - store_test_results:
           path: ./reports/
 workflows:
