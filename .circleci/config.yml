@@ -9,16 +9,19 @@ jobs:
     steps:
       - checkout
       - node/install-packages
+      - run: 
+          name: Create folder for test results
+          command: mkdir ~/testresults
+      - run: 
+         name: Run tests
+         command: |
+             TEST=$(circleci tests glob "__test__/*.js" | circleci tests split --split-by=timings)
+             npm test $TEST
       - run:
-            name: Install JUnit coverage reporter
-            command: yarn add --dev jest-junit
-      - run:
-            command: |
-               npx jest --listTests | circleci tests run --command=“JEST_JUNIT_ADD_FILE_ATTRIBUTE=true xargs npx jest --config jest.config.js --runInBand --” --verbose --split-by=timings
-            environment:
-              JEST_JUNIT_OUTPUT_DIR: ./reports/
+         command: cp junit.xml ~/testresults/
+         when: always
       - store_test_results:
-          path: ./reports/
+          path: ~/testresults
 workflows:
   basic_workflow:
     jobs:
