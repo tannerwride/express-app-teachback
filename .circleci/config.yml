@@ -15,7 +15,7 @@ jobs:
       - run: 
          name: Run tests
          command: |
-             TEST=$(circleci tests glob "__test__/*.js" | circleci tests split --split-by=timings)
+             TEST=$(circleci tests glob "__test__/*.js" | circleci tests run --split-by=timings -o junit_family=legacy)
              npm test $TEST
       - run:
          command: cp junit.xml ~/testresults/
